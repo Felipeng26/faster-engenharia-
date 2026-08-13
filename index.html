@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Faster Engenharia e Incorporadora — projetos, execução de obras, reformas, estruturas metálicas, Steel Frame, gerenciamento e regularização.">
+<title>Faster Engenharia e Incorporadora | Engenharia que constrói resultados</title>
+<style>
+:root{
+  --navy:#031c2c; --navy-2:#06283c; --navy-3:#0b344b;
+  --gold:#eca91b; --gold-2:#c98808; --white:#fff;
+  --text:#17232c; --muted:#66747d; --light:#f4f6f7; --line:#dfe5e8;
+  --shadow:0 18px 45px rgba(3,28,44,.10);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:var(--text);line-height:1.55;background:#fff}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.container{width:min(1180px,92%);margin:auto}
+
+header{position:fixed;inset:0 0 auto 0;z-index:50;background:rgba(3,28,44,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav{height:88px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.brand{display:flex;align-items:center;min-width:190px}
+.brand img{width:185px;height:72px;object-fit:contain;object-position:center;background:transparent}
+nav{display:flex;align-items:center;gap:25px}
+nav>a:not(.btn){color:#fff;font-size:12px;font-weight:800;letter-spacing:.7px;position:relative;padding:34px 0}
+nav>a:not(.btn):after{content:"";position:absolute;height:2px;left:0;right:100%;bottom:24px;background:var(--gold);transition:.2s}
+nav>a:not(.btn):hover:after{right:0}
+nav>a:not(.btn):hover{color:#f8c34e}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:14px 21px;border-radius:4px;font-weight:900;font-size:12px;letter-spacing:.35px;border:1px solid transparent;transition:.2s;cursor:pointer}
+.btn-gold{background:var(--gold);color:var(--navy)}
+.btn-gold:hover{background:#ffc446;transform:translateY(-1px)}
+.btn-outline{border-color:rgba(255,255,255,.78);color:#fff;background:transparent}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+.btn-dark{background:var(--navy);color:#fff}
+.btn-dark:hover{background:var(--navy-3)}
+
+.hero{min-height:760px;padding-top:88px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(2,19,31,.98) 0%,rgba(2,19,31,.90) 40%,rgba(2,19,31,.35) 72%,rgba(2,19,31,.16) 100%),url("assets/hero.jpg") center/cover no-repeat}
+.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(135deg,transparent 0 62%,rgba(236,169,27,.14) 62.2% 62.7%,transparent 62.9%)}
+.hero-content{position:relative;z-index:2;max-width:690px;color:#fff;padding:105px 0 115px}
+.eyebrow,.section-tag{color:var(--gold);font-size:12px;font-weight:900;letter-spacing:2.4px;text-transform:uppercase}
+.eyebrow{display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.eyebrow:before{content:"";width:38px;height:2px;background:var(--gold)}
+.hero h1{font-size:clamp(46px,6.2vw,78px);line-height:.98;letter-spacing:-2.5px;margin-bottom:26px;max-width:680px}
+.hero h1 span{color:var(--gold)}
+.hero p{font-size:19px;color:#e3ebef;max-width:570px;margin-bottom:34px}
+.actions{display:flex;gap:12px;flex-wrap:wrap}
+
+.highlights{position:relative;z-index:3;margin-top:-38px}
+.highlight-grid{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;box-shadow:var(--shadow);border-bottom:4px solid var(--gold)}
+.highlight{padding:27px 24px;position:relative}
+.highlight+.highlight{border-left:1px solid var(--line)}
+.highlight b{display:block;color:var(--navy);font-size:13px;letter-spacing:1px;margin-bottom:6px}
+.highlight b:before{content:"";display:inline-block;width:8px;height:8px;background:var(--gold);margin-right:9px}
+.highlight span{font-size:13px;color:var(--muted)}
+
+section{padding:98px 0}
+h2{font-size:clamp(34px,4vw,48px);line-height:1.08;letter-spacing:-1.4px;margin-bottom:20px;color:var(--navy)}
+.gold{color:var(--gold-2)}
+.about{background:#fff;padding-top:125px}
+.about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:72px;align-items:center}
+.about-copy p{color:var(--muted);font-size:16px;margin:20px 0 28px;max-width:560px}
+.about-img{min-height:490px;background:url("assets/hero.jpg") center/cover;position:relative;box-shadow:var(--shadow)}
+.about-img:before{content:"";position:absolute;inset:18px;border:1px solid rgba(255,255,255,.42)}
+.about-badge{position:absolute;left:-26px;bottom:32px;background:var(--navy);color:#fff;padding:18px 22px;border-left:5px solid var(--gold);box-shadow:0 15px 35px rgba(3,28,44,.24)}
+.about-badge strong{display:block;color:var(--gold);font-size:12px;letter-spacing:1.5px}
+.about-badge span{font-size:15px;font-weight:800}
+
+.services{background:var(--light);position:relative}
+.center{text-align:center}
+.section-tag{margin-bottom:12px}
+.section-sub{color:var(--muted);max-width:700px;margin:0 auto 44px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:#fff;border:1px solid var(--line);padding:31px;min-height:225px;transition:.25s;position:relative;overflow:hidden}
+.card:before{content:"";position:absolute;left:0;top:0;width:100%;height:4px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:.25s}
+.card:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#f0cc74}
+.card:hover:before{transform:scaleX(1)}
+.icon{width:48px;height:48px;border:1px solid #f0cf7b;background:#fffaf0;color:var(--gold-2);display:grid;place-items:center;font-weight:900;font-size:20px;margin-bottom:20px}
+.card h3{font-size:18px;color:var(--navy);margin-bottom:9px}
+.card p{font-size:14px;color:var(--muted)}
+
+.areas{background:#fff}
+.area-strip{margin-top:42px;display:grid;grid-template-columns:repeat(7,1fr);border:1px solid var(--line)}
+.area-strip span{padding:20px 12px;text-align:center;font-size:12px;font-weight:900;color:var(--navy);background:#fff}
+.area-strip span+span{border-left:1px solid var(--line)}
+.area-strip span:nth-child(even){background:#fafbfb}
+
+.cta{background:linear-gradient(90deg,rgba(3,28,44,.98),rgba(3,28,44,.90)),url("assets/hero.jpg") center/cover;color:#fff;position:relative}
+.cta:after{content:"";position:absolute;right:6%;top:0;width:110px;height:100%;background:linear-gradient(165deg,transparent 0 47%,rgba(236,169,27,.85) 47.3% 49%,transparent 49.3%)}
+.cta-grid{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.cta h2{color:#fff;margin:8px 0 12px}
+.cta p{color:#d5dfe4}
+.contact-info{display:grid;gap:14px}
+.contact-info div{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);padding:17px 18px;border-left:3px solid var(--gold)}
+.contact-info b{display:block;font-size:11px;color:var(--gold);letter-spacing:1px;margin-bottom:3px}
+.contact-info span{font-size:14px;color:#fff;word-break:break-word}
+
+footer{background:#02141f;color:#aab8bf;padding:31px 0;font-size:12px;border-top:1px solid rgba(255,255,255,.06)}
+.footer{display:flex;align-items:center;justify-content:space-between;gap:25px}
+.footer-brand{display:flex;align-items:center;gap:18px}
+.footer-brand img{width:150px;height:82px;object-fit:contain;object-position:center;background:transparent}
+.footer-copy{display:flex;flex-direction:column;gap:2px}
+
+.whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:70;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;font-size:25px;font-weight:900;box-shadow:0 10px 28px rgba(0,0,0,.22);transition:.2s}
+.whatsapp-float:hover{transform:translateY(-3px) scale(1.03)}
+
+@media(max-width:980px){
+  nav>a:not(.btn){display:none}.nav{height:78px}.brand img{height:58px;width:163px}.hero{padding-top:78px;min-height:690px}
+  .highlight-grid{grid-template-columns:1fr 1fr}.about-grid,.cta-grid{grid-template-columns:1fr;gap:45px}.about-img{min-height:390px}.cards{grid-template-columns:1fr 1fr}.area-strip{grid-template-columns:repeat(3,1fr)}.area-strip span{border:1px solid var(--line)!important}.cta:after{display:none}
+}
+@media(max-width:620px){
+  .container{width:min(92%,1180px)}header .btn{padding:11px 13px;font-size:10px}.brand{min-width:0}.brand img{width:140px;height:52px}
+  .hero{min-height:650px}.hero-content{padding:70px 0 95px}.hero h1{font-size:46px}.hero p{font-size:16px}
+  .highlights{margin-top:-22px}.highlight-grid,.cards,.area-strip{grid-template-columns:1fr}.highlight+.highlight{border-left:0;border-top:1px solid var(--line)}
+  section{padding:72px 0}.about{padding-top:95px}.about-img{min-height:310px}.about-badge{left:12px;bottom:12px}.cards{gap:14px}
+  .footer{align-items:flex-start;flex-direction:column}.footer-brand img{width:110px}.whatsapp-float{width:54px;height:54px;right:16px;bottom:16px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#inicio" aria-label="Faster Engenharia e Incorporadora">
+      <img src="assets/logo-faster.jpg" alt="Faster Engenharia e Incorporadora">
+    </a>
+    <nav>
+      <a href="#inicio">INÍCIO</a>
+      <a href="#sobre">SOBRE</a>
+      <a href="#servicos">SERVIÇOS</a>
+      <a href="#atuacao">ATUAÇÃO</a>
+      <a href="#contato">CONTATO</a>
+      <a class="btn btn-gold" href="https://wa.me/5511942562624" target="_blank" rel="noopener">FALE CONOSCO</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio">
+  <div class="container hero-content">
+    <div class="eyebrow">Faster Engenharia e Incorporadora</div>
+    <h1>ENGENHARIA QUE <span>CONSTRÓI</span> RESULTADOS.</h1>
+    <p>Projetos, construção, reformas e gestão de obras com qualidade, segurança e compromisso em cada detalhe.</p>
+    <div class="actions">
+      <a class="btn btn-gold" href="https://wa.me/5511942562624" target="_blank" rel="noopener">SOLICITAR ORÇAMENTO</a>
+      <a class="btn btn-outline" href="#servicos">CONHEÇA NOSSOS SERVIÇOS</a>
+    </div>
+  </div>
+</section>
+
+<div class="highlights">
+  <div class="container highlight-grid">
+    <div class="highlight"><b>QUALIDADE</b><span>Padrões elevados em cada etapa da obra.</span></div>
+    <div class="highlight"><b>SEGURANÇA</b><span>Compromisso com normas e pessoas.</span></div>
+    <div class="highlight"><b>PRAZOS</b><span>Planejamento e controle para entregar no prazo.</span></div>
+    <div class="highlight"><b>EFICIÊNCIA</b><span>Gestão inteligente para melhores resultados.</span></div>
+  </div>
+</div>
+
+<section class="about" id="sobre">
+  <div class="container about-grid">
+    <div class="about-copy">
+      <div class="section-tag">Sobre a Faster</div>
+      <h2>Soluções completas em engenharia para <span class="gold">transformar ideias</span> em realidade.</h2>
+      <p>A Faster Engenharia e Incorporadora atua com projetos, construções, reformas, estruturas, Steel Frame, gerenciamento de obras e soluções de incorporação, oferecendo atendimento técnico e personalizado para cada cliente.</p>
+      <a class="btn btn-dark" href="https://wa.me/5511942562624" target="_blank" rel="noopener">FALE COM NOSSA EQUIPE →</a>
+    </div>
+    <div class="about-img">
+      <div class="about-badge"><strong>FASTER ENGENHARIA E INCORPORADORA</strong><span>Qualidade e compromisso em cada etapa</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="servicos">
+  <div class="container">
+    <div class="center">
+      <div class="section-tag">Nossos serviços</div>
+      <h2>Do projeto à entrega, cuidamos de tudo.</h2>
+      <p class="section-sub">Soluções integradas para obras residenciais, comerciais, corporativas e industriais.</p>
+    </div>
+    <div class="cards">
+      <article class="card"><div class="icon">⌁</div><h3>Projetos de Engenharia</h3><p>Projetos estruturais, complementares, executivos e soluções para reformas.</p></article>
+      <article class="card"><div class="icon">⌂</div><h3>Construção e Reformas</h3><p>Execução de obras residenciais, comerciais, corporativas e industriais.</p></article>
+      <article class="card"><div class="icon">◇</div><h3>Steel Frame e Construção a Seco</h3><p>Soluções modernas, rápidas e eficientes em Light Steel Frame e drywall.</p></article>
+      <article class="card"><div class="icon">▱</div><h3>Estruturas Metálicas</h3><p>Projetos, fabricação e execução de estruturas metálicas com precisão.</p></article>
+      <article class="card"><div class="icon">✓</div><h3>Gerenciamento de Obras</h3><p>Planejamento, cronograma, custos, equipes, fornecedores e controle da execução.</p></article>
+      <article class="card"><div class="icon">▤</div><h3>Regularização e Aprovações</h3><p>Aprovação de projetos, licenças, alvarás e acompanhamento de processos.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="areas" id="atuacao">
+  <div class="container center">
+    <div class="section-tag">Áreas de atuação</div>
+    <h2>Engenharia para diferentes desafios.</h2>
+    <p class="section-sub">Atendimento técnico com soluções adequadas ao perfil e à necessidade de cada projeto.</p>
+    <div class="area-strip">
+      <span>RESIDENCIAL</span><span>COMERCIAL</span><span>CORPORATIVO</span><span>CLÍNICAS</span><span>CONDOMÍNIOS</span><span>INDUSTRIAL</span><span>OBRAS PÚBLICAS</span>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contato">
+  <div class="container cta-grid">
+    <div>
+      <div class="section-tag">Vamos construir?</div>
+      <h2>Vamos construir o próximo projeto juntos?</h2>
+      <p>Fale com a Faster Engenharia e Incorporadora e solicite um orçamento.</p>
+      <div class="actions" style="margin-top:26px">
+        <a class="btn btn-gold" href="https://wa.me/5511942562624" target="_blank" rel="noopener">CHAMAR NO WHATSAPP</a>
+        <a class="btn btn-outline" href="mailto:felipe_engcivil@outlook.com.br">ENVIAR E-MAIL</a>
+      </div>
+    </div>
+    <div class="contact-info">
+      <div><b>TELEFONE / WHATSAPP</b><span>(11) 94256-2624</span></div>
+      <div><b>E-MAIL</b><span>felipe_engcivil@outlook.com.br</span></div>
+      <div><b>CNPJ</b><span>64.415.197/0001-02</span></div>
+      <div><b>ATUAÇÃO</b><span>São Paulo e Região</span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer">
+    <div class="footer-brand">
+      <img src="assets/logo-faster.jpg" alt="Faster Engenharia e Incorporadora">
+      <div class="footer-copy"><span>© 2026 Faster Engenharia e Incorporadora. Todos os direitos reservados.</span><span>CNPJ 64.415.197/0001-02 • Engenharia • Construção • Projetos • Gestão de Obras</span></div>
+    </div>
+    <span>São Paulo e Região</span>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/5511942562624" target="_blank" rel="noopener" aria-label="Chamar no WhatsApp">✆</a>
+</body>
+</html>
